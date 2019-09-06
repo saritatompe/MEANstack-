@@ -1,5 +1,5 @@
 # Group 5 : Adv Web Application Dev
-Group Member : 1) Sarita Subhash Tompe <br>
+Name : Sarita Subhash Tompe <br>
 Project Name : MovieRateFlixProject <br>
 Project Technologies :  Mongodb, Express Js , Angular 6, Node js (MEAN Stack Web Application) <br>
 Prerequisite : Node should be installed , Angular should be installed, Express Library, MongoDB should be installed on the system. <br><br>
