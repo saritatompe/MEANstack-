@@ -1,0 +1,17 @@
+<div class="thumbnail">
+        <div class="caption">
+          <h4 class="text-ellipsis">
+            <h4 style="color: aqua" title="{{movie.title}}">{{movie.title}}</h4>
+          </h4>
+          <p><strong>Release Date: </strong>{{movie.release_date}}</p>
+          <p><img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" *ngIf="movie.poster_path"></p>
+          <p>
+            <a routerLink="/movie/{{movie.id}}" >View details &raquo;</a> <!-- routerLink="/movie/{{movie.id}}" -->
+            <small class="label label-success pull-right" *ngIf="movie.vote_average">
+              {{movie.vote_average}}
+              <i class="glyphicon glyphicon-star"></i>
+            </small>
+          </p>
+        </div>
+      </div>
+      

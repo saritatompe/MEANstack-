@@ -1,0 +1,16 @@
+img {
+    width: 100%;
+}
+.card .card-title {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.thumbnail{
+    background-image: url("https://www.backgroundcheckall.com/wp-content/uploads/2017/12/background-vintage-black-5.jpg");
+}

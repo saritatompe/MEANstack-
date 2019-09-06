@@ -1,0 +1,95 @@
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3">
+                <form class="was-validated" #userreview="ngForm" (ngSubmit)="onClickSubmit(userreview.value)">
+                    <div class="form-group">
+                        <label for="uname">User Name:</label>
+                        <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname"
+                            [(ngModel)]="uname">
+                        <!-- <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="mname">Movie Name:</label>
+                        <!-- <input type="text" class="form-control" id="mname" placeholder="Enter Movie Name" name="mname"
+                            [(ngModel)]="mname" required> -->
+                           <br> <select style="color: aquamarine;background-color: black" name="mname" required (change)="onChange($event.target.value)">
+                                    <option  disabled>Select a Movie</option>
+                                    <option *ngFor="let option of movie_name_list" [value]="option.id">
+                                      {{option.title}}
+                                    </option>
+                            </select>
+                        <!-- <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div> -->
+                    </div>
+                 
+                    <div class="form-group">
+                        <label for="comment">Comment :</label><br>
+                        <textarea class="form-control" rows="5" id="comment" name="comment"
+                            [(ngModel)]="comment"></textarea>
+                        <!-- <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="rate">Rating:</label><br>
+                        <fieldset class="rating">
+                            <input type="radio" id="star10" name="rating" value="10" [(ngModel)]="rating" /><label
+                                class="full" for="star10" title="excellent - 10 stars"></label>
+                            <input type="radio" id="star9half" name="rating" value="9 and a half"
+                                [(ngModel)]="rating" /><label class="half" for="star9half"
+                                title="Pretty awesome - 9.5 stars"></label>
+                            <input type="radio" id="star9" name="rating" value="9" [(ngModel)]="rating" /><label
+                                class="full" for="star9" title="excellent - 9 stars"></label>
+                            <input type="radio" id="star8half" name="rating" value="8 and a half"
+                                [(ngModel)]="rating" /><label class="half" for="star8half"
+                                title="Pretty awesome - 8.5 stars"></label>
+                            <input type="radio" id="star8" name="rating" value="8" [(ngModel)]="rating" /><label
+                                class="full" for="star8" title="excellent - 8 stars"></label>
+                            <input type="radio" id="star7half" name="rating" value="7 and a half"
+                                [(ngModel)]="rating" /><label class="half" for="star7half"
+                                title="Pretty awesome - 7.5 stars"></label>
+                            <input type="radio" id="star7" name="rating" value="7" [(ngModel)]="rating" /><label
+                                class="full" for="star7" title="excellent - 7 stars"></label>
+                            <input type="radio" id="star6half" name="rating" value="6 and a half"
+                                [(ngModel)]="rating" /><label class="half" for="star6half"
+                                title="Pretty awesome - 6.5 stars"></label>
+                            <input type="radio" id="star6" name="rating" value="6" [(ngModel)]="rating" /><label
+                                class="full" for="star6" title="excellent - 6 stars"></label>
+                            <input type="radio" id="star5half" name="rating" value="5 and a half"
+                                [(ngModel)]="rating" /><label class="half" for="star5half"
+                                title="Pretty awesome - 5.5 stars"></label>
+                            <input type="radio" id="star5" name="rating" value="5" [(ngModel)]="rating" /><label
+                                class="full" for="star5" title="Awesome - 5 stars"></label>
+                            <input type="radio" id="star4half" name="rating" value="4 and a half"
+                                [(ngModel)]="rating" /><label class="half" for="star4half"
+                                title="Pretty good - 4.5 stars"></label>
+                            <input type="radio" id="star4" name="rating" value="4" [(ngModel)]="rating" /><label
+                                class="full" for="star4" title="Pretty good - 4 stars"></label>
+                            <input type="radio" id="star3half" name="rating" value="3 and a half"
+                                [(ngModel)]="rating" /><label class="half" for="star3half"
+                                title="Meh - 3.5 stars"></label>
+                            <input type="radio" id="star3" name="rating" value="3" [(ngModel)]="rating" /><label
+                                class="full" for="star3" title="Meh - 3 stars"></label>
+                            <input type="radio" id="star2half" name="rating" value="2 and a half"
+                                [(ngModel)]="rating" /><label class="half" for="star2half"
+                                title="Kinda bad - 2.5 stars"></label>
+                            <input type="radio" id="star2" name="rating" value="2" [(ngModel)]="rating" /><label
+                                class="full" for="star2" title="Kinda bad - 2 stars"></label>
+                            <input type="radio" id="star1half" name="rating" value="1 and a half"
+                                [(ngModel)]="rating" /><label class="half" for="star1half"
+                                title="Meh - 1.5 stars"></label>
+                            <input type="radio" id="star1" name="rating" value="1" [(ngModel)]="rating" /><label
+                                class="full" for="star1" title="Sucks big time - 1 star"></label>
+                            <input type="radio" id="starhalf" name="rating" value="half" [(ngModel)]="rating" /><label
+                                class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                        </fieldset>
+                        <!-- <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div><br> -->
+                    </div>
+                    <br>
+                    <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>

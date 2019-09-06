@@ -1,0 +1,21 @@
+.navbar-fixed-top{
+    height: 60px;
+    background-image: url("https://image.freepik.com/free-vector/abstract-black-polygon-red-light-futuirstic-technology-background_33869-444.jpg");
+}
+/* nav{
+    background-image: url("https://previews.123rf.com/images/dvarg/dvarg1502/dvarg150200085/37302621-illustration-of-seamless-abstract-black-floral-vine-pattern.jpg");
+} */
+a:hover { 
+    background-color: tomato !important;
+    color: black
+  }
+  .list-group-item{
+      background-color: black
+  }
+  /* .list-group-item :hover{
+    background-color: yellow !important;
+  } */
+
+  .list-group-item.active{
+      background-color: crimson
+  }

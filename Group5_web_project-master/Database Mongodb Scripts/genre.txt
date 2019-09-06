@@ -1,0 +1,18 @@
+db.genre.insert(
+	[
+		{"_id":"5d2e64a45e4bdcb2a087bfeb","id":28,"name":"Action"},
+		{"_id":"5d2e64a45e4bdcb2a087bfec","id":12,"name":"Adventure"},
+		{"_id":"5d2e64a45e4bdcb2a087bfed","id":16,"name":"Animation"},
+		{"_id":"5d2e64a45e4bdcb2a087bfee","id":35,"name":"Comedy"},
+		{"_id":"5d2e64a45e4bdcb2a087bfef","id":80,"name":"Crime"},
+		{"_id":"5d2e64a45e4bdcb2a087bff1","id":18,"name":"Drama"},
+		{"_id":"5d2e64a45e4bdcb2a087bff2","id":10751,"name":"Family"},
+		{"_id":"5d2e64a45e4bdcb2a087bff3","id":14,"name":"Fantasy"},
+		{"_id":"5d2e64a45e4bdcb2a087bff4","id":36,"name":"History"},
+		{"_id":"5d2e64a45e4bdcb2a087bff5","id":27,"name":"Horror"},
+		{"_id":"5d2e64a45e4bdcb2a087bff8","id":10749,"name":"Romance"},
+		{"_id":"5d2e64a45e4bdcb2a087bff9","id":878,"name":"Science Fiction"},
+		{"_id":"5d2e64a45e4bdcb2a087bffb","id":53,"name":"Thriller"},
+		{"_id":"5d2e64a45e4bdcb2a087bffc","id":10752,"name":"War"}
+	]
+)

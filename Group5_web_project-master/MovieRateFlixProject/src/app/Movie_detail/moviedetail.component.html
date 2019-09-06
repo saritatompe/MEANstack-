@@ -1,0 +1,51 @@
+<div class="row" *ngFor="let movie of movies">
+  <div class="col-md-4">
+    <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="" class="thumbnail">
+    <p>
+      <a *ngIf="movie.homepage" href="{{movie.homepage}}" class="btn btn-info btn-block" target="_blank">Visit Movies
+        Website</a>
+    </p>
+  </div>
+  <div class="col-md-8">
+    <h2>{{movie.title}}
+      <small class="label label-warning">
+        {{movie.vote_average}}
+        <i class="glyphicon glyphicon-star"></i>
+      </small>
+    </h2>
+    <p>{{movie.tagline}}</p>
+
+      <div *ngFor="let genre of movie.genres" class="label label-info m-r-md">
+        {{genre.name}}
+      </div>
+ 
+    <h3>Overview</h3>
+    <p>
+      {{movie.overview}}
+    </p>
+    <!--Casts-->
+    <h3>Cast</h3>
+    <div class="col-md-3" *ngFor="let cast of movie.castdetails.cast let i = index;">
+      <div *ngIf="i < 4">
+        <div class="thumbnail">
+          <img src="https://image.tmdb.org/t/p/w500/{{cast.profile_path}}" alt="">
+          <div class="caption">
+            <h6 class="text-center">{{cast.name}}</h6>
+          </div>
+        </div>
+      </div>
+      </div>
+   
+    <div class="row" *ngIf="movie.review && movie.review.length > 0">
+      <div class="col-md-12">
+        <h2>IMDB Reviews</h2>
+      </div>
+    <div class="col-md-12" *ngFor="let review of movie.review">
+      <blockquote>
+        <p class="text-justify">{{review.comment}}</p> 
+        <h5 style="color: deepskyblue">Rating : {{review.rating}}/10</h5>
+        <h5 style="color: yellow">- {{review.user}}</h5>
+      </blockquote>
+    </div>
+    
+</div>

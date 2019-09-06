@@ -1,0 +1,55 @@
+<nav class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+        aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+      </button>
+      <a style="height: 60px;background-image: url('https://image.freepik.com/free-vector/abstract-black-polygon-red-light-futuirstic-technology-background_33869-444.jpg');"class="navbar-brand" routerLink="/">Movies RateFlix</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active"><a  style=" font-size: 15px;height: 60px;background-image: url('https://image.freepik.com/free-vector/abstract-black-polygon-red-light-futuirstic-technology-background_33869-444.jpg');" routerLink="/listreviwes">Post Review</a></li>
+      </ul>
+    </div>
+  
+  </div>
+
+</nav>
+
+<div class="container-fluid app-container">
+  <div class="row">
+ 
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".movies-cat">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div style="background-color: rgb(34, 33, 33)" class="collapse navbar-collapse movies-cat">
+            <div class="panel-heading"><b>Movies Category</b></div>
+            <ul  class="nav nav-stacked">
+              <a routerLink="/genres/{{g.id}}" routerLinkActive="active" class="list-group-item" *ngFor="let g of genre">{{g.name}}</a>
+            </ul>
+          </div>
+    
+      </nav>
+    </div>
+  
+    <div class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
+      <router-outlet></router-outlet>
+    </div>
+   
+  </div>
+ 
+  <hr>
+  <footer>
+    <p>&copy; @2019 Group 5 Project</p>
+  </footer>
+</div>
